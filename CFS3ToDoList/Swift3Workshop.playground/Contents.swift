@@ -173,3 +173,7 @@ if surveyAnswer != nil {
     print("surveyAnswer is not nil")
 }
 
+if let surveyAnswer = surveyAnswer{
+    print(surveyAnswer)
+}
+
