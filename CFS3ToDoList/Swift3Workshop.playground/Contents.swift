@@ -177,3 +177,28 @@ if let surveyAnswer = surveyAnswer{
     print(surveyAnswer)
 }
 
+//Coding Challenge
+
+let solarPlanet = ["Mercurial", "Venis", "Earth", "Mars", "Saturn", "Jupiter", "Uran", "Pluton"]
+for planet in solarPlanet {
+    print(planet)
+    if planet == "Earth" {
+        print("YAY \(planet)")
+    }
+}
+
+let tupleChallenge = (1, 0, 640, 480)
+
+switch tupleChallenge {
+case (0, let y, let width, let height):
+    print("The width is \(width) and height is \(height) on y = \(y)")
+case (let x, 0, let width, let height):
+    print("The width is \(width) and height is \(height) on x = \(x)")
+default:
+    break
+}
+
+var dictionaryChallenge: [Int: String] = [11: "Eleven", 22: "Twenty two", 33: "Thirty tree"]
+dictionaryChallenge.removeValue(forKey: 22)
+print(dictionaryChallenge.count)
+
