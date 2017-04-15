@@ -284,13 +284,30 @@ addThese(numbers: 1, 2, 3, 4, 5)
 func changeStuff (number: Int, callback: (Int) -> ()) {
     callback(number * number)
 }
+
+//Closures
+
 changeStuff(number: 10) { (results) in
     
 }
 
-//Closures
+//Challenges
 
+func minMax (array: [Int]) -> (min: Int, max: Int)? {
+    if array.isEmpty { return nil }
+    var currentMin = array[0]
+    var currentMax = array[0]
+    for value in array[1..<array.count] {
+        if value < currentMin {
+            currentMin = value
+        } else if value > currentMax {
+            currentMax = value
+        }
+    }
+    return (currentMin, currentMax)
+}
 
-
-
+if let checkMinMax = minMax(array: [11, 4, 15, 8, 3]) {
+    print("Minimum is \(checkMinMax.min) and maximum is \(checkMinMax.max)")
+}
 
